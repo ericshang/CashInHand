@@ -1,0 +1,253 @@
+﻿<Page
+    x:Class="KiwiTaxAndIncom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KiwiTaxAndIncom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Foreground="White">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF011C55" Offset="0"/>
+                <GradientStop Color="#FF02AC1A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Right" 
+                   Margin="50,20,20,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Center"
+                   Grid.Row="0"
+                   FontSize="24"
+                   >
+            Tax rates updated on September, 2014
+        </TextBlock>
+        <TextBlock 
+            Margin="80 0" 
+            Grid.Row="1" 
+            VerticalAlignment="Center"
+            Style="{StaticResource TitleTextBlockStyle}"
+            FontSize="42"
+            >
+            Tax and Income Calculator for Kiwis
+        </TextBlock>
+
+
+        <StackPanel 
+            x:Name="myStackPanel1"
+            Grid.Row="2"
+            Width="300"
+            HorizontalAlignment="Left"
+            Margin="80 0">
+
+            <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Input anual income"
+                       Margin="0 25 0 10"
+                       FontSize="30" />
+
+            <TextBox x:Name="anualIncomeTextBox" 
+                    Text="$0.00"
+                    TextAlignment="Right"
+                    HorizontalAlignment="Left"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Top"
+                    InputScope="Number"
+                    Width="220"
+                    FontSize="24"
+                    LostFocus="anualIncomeTextBox_LostFocus"
+                    TextChanged="anualIncomeTextBox_TextChanged"
+                    GotFocus="anualIncomeTextBox_GotFocus"/>
+
+            <TextBlock HorizontalAlignment="Left" 
+            	    Margin="0,20,0,0" 
+            	    TextWrapping="Wrap" 
+            	    Text="Your Kiwi Saver rates:"
+                    FontSize="24"
+            	    VerticalAlignment="Top"/>
+
+            <RadioButton Content="None"
+                         Foreground="White"
+                         Tag="0"
+                         IsChecked="True"
+                         GroupName="percentRadio"
+                         Click="RadioButton_Click"/>
+
+            <RadioButton Content="3%"
+                         Tag="0.03"
+                         Foreground="White"
+                         GroupName="percentRadio"
+                         Click="RadioButton_Click"/>
+
+            <RadioButton Content="4%"
+                         Tag="0.04"
+                         Foreground="White"
+                         GroupName="percentRadio"
+                         Click="RadioButton_Click"/>
+
+            <RadioButton Content="8%"
+                         Tag="0.08"
+                         Foreground="White"
+                         GroupName="percentRadio"
+                         Click="RadioButton_Click"/>
+            <StackPanel x:Name="studentLoanStackPanel">
+                <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Student Loan"
+                       Foreground="White"
+                       FontSize="24" Margin="0 20 0 0" />
+                <RadioButton x:Name="studentLoanRadioButton" 
+                Content="Student Loan"
+                         Tag="yes"
+                         Foreground="White"
+                         GroupName="studentLoanRadio"
+                         Click="studentLoanRadioButton_Click"
+                         />
+                <RadioButton x:Name="studentLoanRadioButton2" 
+                Content="No Student Loan"
+                         Tag="no"
+                         Foreground="White"
+                         IsChecked="True"
+                         GroupName="studentLoanRadio"
+                         Click="studentLoanRadioButton_Click"
+                         />
+            </StackPanel>
+
+            <StackPanel x:Name="periodStackPanel">
+                <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Caculate Period"
+                       Foreground="White"
+                       FontSize="24" Margin="0 20 0 0" />
+                <RadioButton x:Name="showInAnually" 
+                Content="Anually"
+                         Tag="Anually"
+                         IsChecked="True"
+                         Foreground="White"
+                         GroupName="showInRadio"
+                         Click="showIn_Click"
+                        />
+                <RadioButton x:Name="showInMonthly" 
+                Content="Monthly"
+                         Tag="Monthly"
+                         IsChecked="False"
+                         Foreground="White"
+                         GroupName="showInRadio"
+                         Click="showIn_Click"
+                         />
+                <RadioButton x:Name="showInFortnight" 
+                Content="Fortnightly"
+                         Tag="Fortnightly"
+                         IsChecked="False"
+                         Foreground="White"
+                         GroupName="showInRadio"
+                         Click="showIn_Click"
+                         />
+                <RadioButton x:Name="showInWeekly" 
+                Content="Weekly"
+                         Tag="Weekly"
+                         Foreground="White"
+                         IsChecked="False"
+                         GroupName="showInRadio"
+                         Click="showIn_Click"
+                        />
+            </StackPanel>
+            
+        </StackPanel>
+
+        <StackPanel x:Name="ResultStackPanel"
+            Grid.Row="2"
+            HorizontalAlignment="Left"
+            Margin="500 0">
+
+            <TextBlock Text="Calculation Results"
+                       HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="30"
+                       Margin="10 30 10 0"/>
+            <TextBlock x:Name="detailResultsGrossIncome" HorizontalAlignment="Right"
+                       TextWrapping="NoWrap"                       
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	Your annual income: <Run x:Name="grossIncomeRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="24"
+                       Margin="0 30 0 10">
+                	Deductions:
+            </TextBlock>
+            <TextBlock x:Name="deductionPercent" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	Deductions Percent: <Run x:Name="deductionPercentRun" Foreground="#FFF0FB05">0.00 %</Run>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="24"
+                       Margin="0 30 0 10">
+                	Deduction Details:
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	<Run x:Name="byPeriodRun">Annually</Run>
+            </TextBlock>
+
+            <TextBlock x:Name="detailResultsTaxPaid" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	Tax Paid: <Run x:Name="taxPaidRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsACCPaid" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	ACC Paid: <Run x:Name="ACCPaidRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsKiwiSaver" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	Kiwi Saver: <Run x:Name="KiwiSaverRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsStudentLoan" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="18">
+                	Student Loan Paid: <Run x:Name="studentLoanRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+
+
+
+            <TextBlock Text="Cash In Hand"
+                       HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="24"
+                       Margin="0 30 0 0"/>
+            <TextBlock x:Name="cashInHandTextBlock"
+                       HorizontalAlignment="Right"
+                       TextWrapping="NoWrap"
+                       VerticalAlignment="Top"
+                       Margin="0 5 0 0"
+                       Text="$0.00"
+                       FontSize="36"/>
+
+        </StackPanel>
+
+        <Image Grid.Row="2" Source="Assets/nz.png" Stretch="Fill" Width="200" Height="300" Margin="50 20" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+
+
+    </Grid>
+</Page>

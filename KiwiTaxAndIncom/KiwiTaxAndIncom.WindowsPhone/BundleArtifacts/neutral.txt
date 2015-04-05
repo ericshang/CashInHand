@@ -1,0 +1,3 @@
+MainPackage=C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.WindowsPhone\bin\Release\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_Bundle\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_AnyCPU.appx
+SymbolPackage=C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.WindowsPhone\AppPackages\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_Test\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_AnyCPU.appxsym
+ResourcePack=C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.WindowsPhone\bin\Release\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_Bundle\KiwiTaxAndIncome.WindowsPhone_1.1.0.3_scale-180.appx

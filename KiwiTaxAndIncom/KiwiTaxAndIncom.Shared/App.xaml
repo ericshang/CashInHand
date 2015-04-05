@@ -1,0 +1,19 @@
+﻿<Application
+    x:Class="KiwiTaxAndIncom.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KiwiTaxAndIncom">
+
+
+    <Application.Resources>
+
+        <Style TargetType="TextBlock" x:Key="myTextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontFamily" Value="Calibri"></Setter>
+            <Setter Property="Margin" Value="10 0 10 0"></Setter>
+        </Style>
+
+    </Application.Resources>
+
+
+</Application>

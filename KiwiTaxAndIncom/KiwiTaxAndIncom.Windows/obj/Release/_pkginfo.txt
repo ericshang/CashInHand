@@ -1,0 +1,1 @@
+C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\AppPackages\KiwiTaxAndIncome.Windows_1.1.0.0_AnyCPU_Test\KiwiTaxAndIncome.Windows_1.1.0.0_AnyCPU.appx

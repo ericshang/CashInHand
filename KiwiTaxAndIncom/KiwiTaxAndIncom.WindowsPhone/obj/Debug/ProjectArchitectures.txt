@@ -1,0 +1,1 @@
+C:\Users\Shang\Documents\Visual Studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.WindowsPhone\KiwiTaxAndIncome.WindowsPhone.csproj;neutral

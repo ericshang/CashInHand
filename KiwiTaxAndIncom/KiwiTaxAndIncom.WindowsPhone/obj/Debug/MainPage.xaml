@@ -1,0 +1,248 @@
+﻿<Page
+    x:Class="KiwiTaxAndIncom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KiwiTaxAndIncom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF011C55" Offset="0"/>
+                <GradientStop Color="#FF02AC1A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Right" 
+                   Margin="30,5,5,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Center"
+                   Grid.Row="0"
+                   FontSize="14"
+                   >
+            Tax rates updated on September, 2014
+        </TextBlock>
+        <TextBlock 
+            Margin="10 0" 
+            Grid.Row="1" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Style="{StaticResource TitleTextBlockStyle}"
+            FontSize="22"
+            >
+            Tax and Income Calculator for Kiwis
+        </TextBlock>
+
+        <StackPanel 
+            x:Name="myStackPanel1"
+            Grid.Row="2"
+            Width="160"
+            HorizontalAlignment="Left"
+            Margin="10 0">
+
+            <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Input anual income"
+                       Margin="0 30"
+                       FontSize="16" />
+
+            <TextBox x:ConnectionId='1' x:Name="anualIncomeTextBox" 
+                    Text="$0.00"
+                    TextAlignment="Right"
+                    HorizontalAlignment="Left"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Top"
+                    InputScope="Number"
+                    Width="150"
+                    FontSize="16"
+                                                            
+                                                                
+                                                          />
+            
+            <TextBlock HorizontalAlignment="Left" 
+            	    Margin="0,10" 
+            	    TextWrapping="Wrap" 
+            	    Text="Kiwisaver:"
+                    FontSize="16"
+            	    VerticalAlignment="Top"/>
+            
+            <ComboBox Width="120"
+                      x:Name="kiwisaverComboBox"
+                      AllowDrop="True"
+                      HorizontalAlignment="Left">
+                <ComboBoxItem x:ConnectionId='8' 
+                    Content="None"
+                    IsSelected="True" 
+                    Tag="0.0" 
+                                                     />
+                <ComboBoxItem x:ConnectionId='9' 
+                    Content="3%"  
+                    Tag="0.03"
+                                                     />
+                <ComboBoxItem x:ConnectionId='10'
+                    Content="4%"
+                    Tag="0.04"
+                                                     />
+                <ComboBoxItem x:ConnectionId='11'
+                    Content="8%"
+                    Tag="0.08"
+                                                     />
+            </ComboBox>
+            
+            <StackPanel x:Name="studentLoanStackPanel">
+                <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Student Loan:"
+                       Foreground="White"
+                       FontSize="16" Margin="0 5 0 0" />
+
+                <ComboBox Width="120" 
+                          x:Name="studentLoanComboBox"
+                          AllowDrop="True"
+                          HorizontalAlignment="Left">
+                    <ComboBoxItem x:ConnectionId='6' 
+                        Content="No" 
+                        IsSelected="True" 
+                        Tag="no" 
+                                                          />
+                    <ComboBoxItem x:ConnectionId='7' 
+                        Content="Yes" 
+                        Tag="yes" 
+                                                          />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="periodStackPanel">
+                <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="Caculate Period:"
+                       Foreground="White"
+                       FontSize="16" Margin="0 20 0 0" />
+                <ComboBox Width="120"
+                          x:Name="periodComboBox"
+                          AllowDrop="True"
+                          HorizontalAlignment="Left">
+                    <ComboBoxItem x:ConnectionId='2' 
+                        Content="Anually" 
+                        IsSelected="True" 
+                        Tag="Anually" 
+                                                      />
+                    <ComboBoxItem x:ConnectionId='3' 
+                        Content="Monthly" 
+                        Tag="Monthly" 
+                                                     />
+                    <ComboBoxItem x:ConnectionId='4' 
+                        Content="Fortnightly" 
+                        IsSelected="True" 
+                        Tag="Fortnightly" 
+                                                     />
+                    <ComboBoxItem x:ConnectionId='5' 
+                        Content="Weekly" 
+                        Tag="Weekly" 
+                                                     />
+                </ComboBox>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel x:Name="ResultStackPanel"
+            Grid.Row="2"
+            HorizontalAlignment="Left"
+            Margin="200 0 10 10">
+
+            <TextBlock Text="Calculation Results"
+                       HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="16"
+                       Margin="10 30 10 0"/>
+            <TextBlock x:Name="detailResultsGrossIncome" HorizontalAlignment="Right"
+                       TextWrapping="NoWrap"                       
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	Your annual income: <Run x:Name="grossIncomeRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="16"
+                       Margin="0 30 0 10">
+                	Deductions:
+            </TextBlock>
+            <TextBlock x:Name="deductionPercent" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	Percentage: <Run x:Name="deductionPercentRun" Foreground="#FFF0FB05">0.00 %</Run>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="16"
+                       Margin="0 30 0 10">
+                	Deduction Details:
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	<Run x:Name="byPeriodRun">Annually</Run>
+            </TextBlock>
+
+            <TextBlock x:Name="detailResultsTaxPaid" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	Tax Paid: <Run x:Name="taxPaidRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsACCPaid" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	ACC Paid: <Run x:Name="ACCPaidRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsKiwiSaver" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	Kiwisaver: <Run x:Name="KiwiSaverRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+            <TextBlock x:Name="detailResultsStudentLoan" HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Margin="0 5 0 0"
+                       FontSize="14">
+                	Student Loan Paid: <Run x:Name="studentLoanRun" Foreground="#FFF0FB05">$0.00</Run>
+            </TextBlock>
+
+
+
+            <TextBlock Text="Cash In Hand"
+                       HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontSize="18"
+                       Margin="0 30 0 0"/>
+            <TextBlock x:Name="cashInHandTextBlock"
+                       HorizontalAlignment="Right"
+                       TextWrapping="NoWrap"
+                       VerticalAlignment="Top"
+                       Margin="0 5 0 0"
+                       Text="$0.00"
+                       FontSize="24"/>
+            
+
+        </StackPanel>
+        
+    </Grid>
+
+        
+        
+    </ScrollViewer>
+</Page>
+

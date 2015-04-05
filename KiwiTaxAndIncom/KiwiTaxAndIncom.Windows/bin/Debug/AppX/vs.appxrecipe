@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ERIC</Machine>
+    <WindowsUser>Eric</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>4adc135a-23a1-4219-a441-dbc0fe4b1646</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>E0ACD13F0E0173BD9B3EF4BAC5570EEADC578DB07F2254BD67422E0CF2419572</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>4adc135a-23a1-4219-a441-dbc0fe4b1646_1.0.0.0_neutral__0b9t7erj4py54</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>4adc135a-23a1-4219-a441-dbc0fe4b1646_0b9t7erj4py54!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>4adc135a-23a1-4219-a441-dbc0fe4b1646</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Eric</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-22T06:44:23.018</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\KiwiTaxAndIncom.Windows.exe">
+      <PackagePath>KiwiTaxAndIncom.Windows.exe</PackagePath>
+      <Modified>2014-09-22T06:44:22.670</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\Logo.scale-180.png">
+      <PackagePath>Assets\Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T01:41:35.185</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\logo126X126.scale-180.png">
+      <PackagePath>Assets\logo126X126.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T01:41:10.636</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\logo558X270.scale-180.png">
+      <PackagePath>Assets\logo558X270.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T01:40:36.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\logo558X558.scale-180.png">
+      <PackagePath>Assets\logo558X558.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T01:39:25.870</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\nz.png">
+      <PackagePath>Assets\nz.png</PackagePath>
+      <Modified>2014-09-21T01:51:02.797</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\SmallLogo.scale-180.png">
+      <PackagePath>Assets\SmallLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T21:09:04.679</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\SplashScreen.scale-180.png">
+      <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T01:45:57.177</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\Assets\StoreLogo.scale-180.png">
+      <PackagePath>Assets\StoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-09-21T21:09:19.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-09-19T04:43:21.312</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-09-22T06:44:21.888</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\KiwiTaxAndIncom.Windows.xr.xml">
+      <PackagePath>KiwiTaxAndIncom.Windows.xr.xml</PackagePath>
+      <Modified>2014-09-22T06:44:21.822</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Eric\documents\visual studio 2013\Projects\KiwiTaxAndIncom\KiwiTaxAndIncom\KiwiTaxAndIncom.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-09-22T06:44:22.885</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
